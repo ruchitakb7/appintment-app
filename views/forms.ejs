@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+ 
+<body>
+    <%- include('./includes/nav.ejs') %>
+    <div class="main">
+        
+        <form action = "/add" method="post">
+ 
+            <p>
+                <label>Username :
+                    <input type="text" name="name" /></label>
+            </p>
+ 
+            <p>
+                <label>city :
+                    <input type="text" name="city" /></label>
+            </p>
+
+            <p>
+                <label>Email:
+                    <input type="text" name="email" /></label>
+            </p>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+ 
+        </form>
+    </div>
+</body>
+ 
+</html>

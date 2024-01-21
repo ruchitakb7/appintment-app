@@ -1,0 +1,45 @@
+<head>
+
+            <link rel="stylesheet" href="/css/form.css">
+</head>
+ 
+<body>
+    <%- include('./includes/nav.ejs') %>
+    <div class="main">
+        <form action="/edit" method="post" >
+            <% if (prod.length > 0) { %>
+                <div>
+                    <% for (let product of prod) { %>
+                        
+                        <p>
+                            <label>Username :
+                                <input type="text" value="<%= product.name %>"   name="name" /></label>
+                        </p>
+             
+                        <p>
+                            <label>city :
+                                <input type="text" value="<%= product.city %>"  name="city" /></label>
+                        </p>
+            
+                        <p>
+                            <label>Email:
+                                <input type="text" value="<%= product.email %>"  name="email" /></label>
+                        </p>
+                        <p>
+                            <input type="hidden" value="<%= product.id %>" name="id">
+                        </p>
+                       
+                        <p>
+                            <button type="submit">Update</button>
+                        </p>
+                           
+                    <% } %>
+                </div>
+            <% } else { %>
+                <h1>No Products Found!</h1>
+            <% } %>
+            </form>
+
+    </div>
+</body>
+ 

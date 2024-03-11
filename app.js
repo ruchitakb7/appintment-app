@@ -26,7 +26,7 @@ const routerfile= require('./routes/forms');
 
 seq.sync()
 .then(res=>
-   { app.listen(1338);  
+   { app.listen(1339);  
 })                               
 .catch((e)=>{
    console.log(e)

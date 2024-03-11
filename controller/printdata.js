@@ -3,8 +3,6 @@ const path= require('path');
 const express=require('express')
 const router=express.Router();
 
-//const data=require('../data/array');
-
 const modelclass= require('../model/model.js');
 
 exports.datacontroller = (req,res,next)=>
